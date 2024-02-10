@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"></link>
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="training-area"></div>
+    <script>
+        var rows = 20;
+        var columns = rows/2;
+        var blockSize;
+
+        const BATCH_SIZE = 1;
+        const colors = {
+                        lightBlue: "#00ffff",
+                        darkBlue : "#0000ff",
+                        orange: "#ff7f00",
+                        yellow: "#ffff00",
+                        green: "#00ff00",
+                        violet: "#800080",
+                        red: "#ff0000",
+                        black: "#000000",
+                        white: "#ffffff"
+        }
+        
+        const shapes = [
+            {
+                locations : [  
+                    {x:-2, y:0}, {x:-1, y:0}, {x:0, y:0}, {x:1, y:0}
+                ],
+                color : colors.lightBlue
+            },
+            {
+                locations : [
+                    {x:0, y:0}, {x:0, y:-1}, {x:-1, y:0}, {x:-2, y:0}
+                ],
+                color : colors.darkBlue
+            },
+            {
+                locations : [
+                    {x:0, y:0}, {x:0, y:-1}, {x:-1, y:-1}, {x:-2, y:-1}
+                ],
+                color : colors.orange
+            },
+            {
+                locations : [
+                    {x:0, y:0}, {x:0, y:-1}, {x:-1, y:0}, {x:-1, y:-1}
+                ],
+                color : colors.yellow
+            },
+            {
+                locations : [
+                    {x:0, y:0}, {x:0, y:-1}, {x:-1, y:0}, {x:-1, y:1}
+                ],
+                color : colors.green
+            },
+            {
+                locations : [
+                    {x:0, y:0}, {x:0, y:1}, {x:0, y:-1}, {x:-1, y:0}
+                ],
+                color : colors.violet
+            },
+            {
+                locations : [
+                    {x:0, y:0}, {x:-1, y:-1}, {x:-1, y:0}, {x:0, y:1}
+                ],
+                color : colors.red
+            }
+
+        ]
+    </script>
+    <script src="js/primitives/block.js"></script>
+    <script src="js/primitives/tetromino.js"></script>
+    <script src="js/tetris.js"></script>
+    <script src="js/timeTaker.js"></script>
+    <script src="js/engine.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
